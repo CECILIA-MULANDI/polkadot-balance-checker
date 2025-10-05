@@ -9,7 +9,7 @@ import { Worker } from "worker_threads";
 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-
+const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -67,7 +67,10 @@ async function getPolkadotBalance(address: string) {
     total,
   };
 }
-// API endpoint
+// API endpoints
+app.get("/", (req, res) => {
+  res.json({ message: "Polkadot Balance API is running" });
+});
 app.get("/api/balance/:address", async (req: any, res: any) => {
   try {
     const { address } = req.params;
@@ -84,5 +87,5 @@ app.get("/api/balance/:address", async (req: any, res: any) => {
 });
 
 app.listen(3001, () => {
-  console.log("🚀 Balance API running on http://localhost:3001");
+  console.log(`🚀 Balance API running on port ${PORT}`);
 });

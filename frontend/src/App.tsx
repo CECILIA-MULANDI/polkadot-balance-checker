@@ -26,7 +26,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/balance/${address}`
+        `https://polkadot-balance-checker-3.onrender.com/api/balance/${address}`
       );
       const data = await response.json();
 
