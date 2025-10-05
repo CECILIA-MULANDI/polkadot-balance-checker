@@ -7,6 +7,7 @@ Find a begineer friendly starter guide here: https://dev.to/mulandi_cecilia/gett
 ## Live Demos
 
 - **Frontend:** [https://polkadot-balance-checker.vercel.app/](https://polkadot-balance-checker.vercel.app/)
+  [image](./frontend/images/image.png)
 - **API Backend:** [https://polkadot-balance-checker-3.onrender.com](https://polkadot-balance-checker-3.onrender.com)
 
 Try the API:
