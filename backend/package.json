@@ -1,6 +1,11 @@
 {
   "dependencies": {
+    "@polkadot-api/descriptors": "file:.papi/descriptors",
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3"
+    "@types/express": "^5.0.3",
+    "polkadot-api": "^1.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2"
   }
 }
