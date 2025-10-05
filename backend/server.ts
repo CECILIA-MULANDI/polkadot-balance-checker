@@ -4,7 +4,8 @@ import { startFromWorker } from "polkadot-api/smoldot/from-node-worker";
 import { getSmProvider } from "polkadot-api/sm-provider";
 import { chainSpec } from "polkadot-api/chains/polkadot";
 import { createClient } from "polkadot-api";
-import { dot } from "@polkadot-api/descriptors";
+// import { dot } from "@polkadot-api/descriptors";
+import { dot } from "./.papi/descriptors";
 import { Worker } from "worker_threads";
 
 import { createRequire } from "module";
