@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: polkadot-backend
+    runtime: node
+    buildCommand: bun install
+    startCommand: bun start
+    envVars:
+      - key: NODE_ENV
+        value: production
