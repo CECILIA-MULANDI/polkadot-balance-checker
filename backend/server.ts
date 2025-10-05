@@ -6,7 +6,9 @@ import { chainSpec } from "polkadot-api/chains/polkadot";
 import { createClient } from "polkadot-api";
 import { dot } from "@polkadot-api/descriptors";
 import { Worker } from "worker_threads";
-import { fileURLToPath } from "url";
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 const app = express();
 app.use(cors());
@@ -14,13 +16,21 @@ app.use(express.json());
 // const ADDRESS = "16JGzEsi8gcySKjpmxHVrkLTHdFHodRepEz8n244gNZpr9J";
 
 async function getPolkadotBalance(address: string) {
+  let workerPath: string;
   // 1. start a light client on a new worker
   // This is helps with better performance since
   // all the intensive work is moved from the main thread
-  const workerPath = fileURLToPath(
-    import.meta.resolve("polkadot-api/smoldot/node-worker")
-  );
+  try {
+    // Try to resolve the worker module path
+    workerPath = require.resolve("polkadot-api/smoldot/node-worker");
+    console.log(`Worker path resolved: ${workerPath}`);
+  } catch (error) {
+    console.error("Failed to resolve worker path:", error);
+    throw new Error("Could not locate polkadot-api worker module");
+  }
+
   const worker = new Worker(workerPath);
+
   const smoldot = startFromWorker(worker);
   const chain = getSmProvider(smoldot.addChain({ chainSpec }));
   //2. Now we can create a papi client

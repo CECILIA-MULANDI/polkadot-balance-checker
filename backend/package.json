@@ -1,11 +1,16 @@
 {
   "dependencies": {
     "@polkadot-api/descriptors": "file:.papi/descriptors",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "polkadot-api": "^1.19.2"
   },
   "devDependencies": {
-    "@types/node": "^24.6.2"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }
