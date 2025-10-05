@@ -3,7 +3,7 @@ services:
     name: polkadot-backend
     runtime: node
     buildCommand: bun install
-    startCommand: bun start
+    startCommand: npx tsx server.ts
     envVars:
       - key: NODE_ENV
         value: production
