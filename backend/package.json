@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@polkadot-api/descriptors": "latest",
+    "@polkadot-api/descriptors": "file:.papi/descriptors",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
