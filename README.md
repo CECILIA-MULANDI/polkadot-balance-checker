@@ -8,7 +8,7 @@ Find a begineer friendly starter guide here: https://dev.to/mulandi_cecilia/gett
 
 - **Frontend:** [https://polkadot-balance-checker.vercel.app/](https://polkadot-balance-checker.vercel.app/)
 
-  ![image](./frontend/images/image.png)
+  ![image](./frontend/images/image1.png)
 
 - **API Backend:** [https://polkadot-balance-checker-3.onrender.com](https://polkadot-balance-checker-3.onrender.com)
 
