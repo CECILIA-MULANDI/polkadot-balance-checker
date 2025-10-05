@@ -86,6 +86,6 @@ app.get("/api/balance/:address", async (req: any, res: any) => {
   }
 });
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log(`🚀 Balance API running on port ${PORT}`);
 });
