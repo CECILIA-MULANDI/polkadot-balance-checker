@@ -32,7 +32,9 @@ async function main() {
   console.log("Querying account info...");
   const accountInfo = await api.query.System.Account.getValue(ADDRESS);
   const freebal = accountInfo.data.free;
-  const readableBal = Number(freebal) / Math.pow(10, 10);
-  console.log(`The current freebal for this user is ${readableBal}`);
+  const freebalInDot = Number(freebal) / Math.pow(10, 10);
+  console.log(
+    `The current free balance for user ${ADDRESS} is ${freebalInDot} DOT`
+  );
 }
 main();
